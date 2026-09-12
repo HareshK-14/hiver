@@ -1,0 +1,48 @@
+# Dependency directories
+node_modules/
+dist/
+build/
+.vite/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+
+# Environment secrets — NEVER commit
+.env
+.env.local
+.env.production
+
+# Python virtual environments
+venv/
+.venv/
+env/
+
+# Data files (can be large)
+data/raw/*.csv
+data/raw/*.json
+data/raw/*.zip
+data/processed/*.json
+data/processed/*.pkl
+data/processed/*.npy
+
+# Evaluation outputs (generated — not source)
+evaluation/results/*.json
+evaluation/results/*.csv
+evaluation/results/*.png
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/settings.json
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+
+# TypeScript build
+*.tsbuildinfo

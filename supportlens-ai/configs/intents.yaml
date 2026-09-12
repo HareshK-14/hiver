@@ -1,0 +1,18 @@
+# SupportLens AI — Intent Taxonomy
+# Populated in Phase 6 (Intent Discovery) from actual brand data.
+# Do NOT manually define intents here without data evidence.
+#
+# Format:
+# intents:
+#   - name: intent_name
+#     description: >
+#       What the customer is asking.
+#     examples:
+#       - "example message 1"
+#     negative_examples:
+#       - "example of what this is NOT"
+#     common_keywords: [kw1, kw2]
+#     escalation_tendency: low | medium | high
+
+intents: []
+# To be populated after Phase 6 — brand selection and intent discovery.

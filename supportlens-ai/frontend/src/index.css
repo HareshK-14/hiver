@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg-base: #F8FAFC;
+  --color-primary-action: #4F46E5;
+  --color-secondary-action: #2563EB;
+  --color-soft-blue: #DBEAFE;
+  --color-soft-cyan: #CFFAFE;
+  --color-soft-lavender: #EDE9FE;
+  --color-soft-violet: #DDD6FE;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+  --color-text-main: #0F172A;
+  --color-text-secondary: #64748B;
+  --color-border: #E2E8F0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--color-bg-base);
+  color: var(--color-text-main);
+}
+
+/* Light Aurora Radial Background Helper */
+.bg-light-aurora {
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(circle at 12% 10%, rgba(219, 234, 254, 0.45), transparent 35%),
+    radial-gradient(circle at 88% 12%, rgba(237, 233, 254, 0.5), transparent 35%),
+    radial-gradient(circle at 50% 90%, rgba(207, 250, 254, 0.35), transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(221, 214, 254, 0.3), transparent 35%);
+}
+
+/* Glass Card Helper */
+.glass-panel {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.03), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+}
+
+.glass-panel-subtle {
+  background-color: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.7);
+}
+
+/* Light Thin Scrollbar */
+.thin-scroll::-webkit-scrollbar { width: 5px; height: 5px; }
+.thin-scroll::-webkit-scrollbar-track { background: transparent; }
+.thin-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+.thin-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* Global Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* Recharts Tooltip Styling */
+.recharts-tooltip-wrapper { outline: none !important; }
+.recharts-default-tooltip {
+  border-radius: 12px !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08) !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* Shake animation for form errors */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-4px); }
+  40%, 80% { transform: translateX(4px); }
+}
+
+.animate-shake {
+  animation: shake 0.35s ease-in-out;
+}

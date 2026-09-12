@@ -1,0 +1,34 @@
+# SupportLens AI — System Configuration
+# Core settings for the AI pipeline.
+
+system:
+  name: SupportLens AI
+  version: "0.1.0"
+  phase: 1
+
+retrieval:
+  top_k: 5                    # Number of historical cases to retrieve
+  similarity_threshold: 0.65  # Minimum cosine similarity to include a case
+  lexical_weight: 0.3         # Weight for TF-IDF lexical score
+  semantic_weight: 0.7        # Weight for embedding semantic score
+
+evidence_quality:
+  strong_threshold: 0.80      # Avg similarity >= this → STRONG
+  medium_threshold: 0.65      # Avg similarity >= this → MEDIUM
+  # Below medium_threshold → WEAK
+
+escalation:
+  auto_handle_min_intent_confidence: 0.75
+  auto_handle_min_evidence_strength: MEDIUM
+  # When in doubt, ESCALATE. Safety over automation.
+
+evaluation:
+  golden_set_size_target: 200
+  golden_set_split: test       # Never used in train/dev/retrieval
+  min_human_labels_for_judge_agreement: 30
+
+data:
+  target_brand: ""            # Set after Phase 3 brand selection
+  train_split: 0.80
+  dev_split: 0.10
+  # golden: 0.10 (separate file — never included in train/dev)
